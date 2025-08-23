@@ -4,7 +4,8 @@
 
 **Project Type:** Data Cleaning · Exploratory Data Analysis · Data Visualization  
 
-**Relevant Link:** [GitHub Repository](#)  
+**Relevant Link: [GitHub Repository](https://github.com/Edwardnam/Walmart-Sales-Forecasting)
+  
 
 ---
 
