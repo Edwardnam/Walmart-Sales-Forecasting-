@@ -5,6 +5,19 @@
 **Project Type:** Data Cleaning · Exploratory Data Analysis · Data Visualization  
 
 **Relevant Link: [GitHub Repository](https://github.com/Edwardnam/Walmart-Sales-Forecasting)
+
+Walmart-Sales-Forecasting/
+├── README.md
+├── assets/
+│   └── charts/
+│       ├── saleovertime.png
+│       ├── rolling_avg_sales.png
+│       ├── store_leaderboard.png
+│       ├── holiday_impact.png
+│       ├── seasonality.png
+│       ├── correlation_matrix.png
+│       ├── sales_vs_unemp.png
+│       ├── sales_vs_fuel.png
   
 
 ---
@@ -86,7 +99,7 @@ The objective is to:
 - From 2010 to 2012, Walmart maintained **stable annual sales**, though 2012 shows slight declines in growth compared to prior years.  
 
 📊 *Charts (Python)*:  
-- ![Weekly Sales Over Time](assets/charts/weekly_sales.png)  
+- ![Weekly Sales Over Time](salesovertime.png)  
 - ![Rolling Average Sales](assets/charts/rolling_avg_sales.png)  
 
 💡 **Why this matters for Walmart leadership:**  
