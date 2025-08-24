@@ -116,7 +116,8 @@ The objective is to:
 
 📊 *Charts (Python + Tableau)*:  
 - ![Holiday Impact Bar](assets/holiday_impact.png)
-- ![Weekly Sales Over Time (Tableau)](assets/weekly_sales_over_time_tableau.png)
+![Weekly Sales Over Time (Tableau)](assets/weekly_sales_over_time_tableau.png)
+
 
 
 
@@ -130,7 +131,8 @@ The objective is to:
 
 📊 *Charts (Python + Tableau)*:  
 - ![Seasonality](assets/seasonality.png)
-- ![Seasonality by Month (Python)](assets/seasonality_by_month_python.png)
+![Seasonality by Month (Python)](assets/seasonality_by_month_python.png)
+
 
 ---
 
