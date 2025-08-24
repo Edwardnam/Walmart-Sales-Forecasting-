@@ -115,7 +115,11 @@ The objective is to:
 - Indicates holidays are a **reliable demand accelerator** and should drive inventory & marketing strategy.  
 
 📊 *Charts (Python + Tableau)*:  
-- ![Holiday Impact Bar](assets/holiday_impact.png)  
+- ![Holiday Impact Bar](assets/holiday_impact.png)
+- | Avg Holiday Sales | Avg Non-Holiday Sales | Holiday Lift (%) |
+|-------------------|------------------------|------------------|
+| $1,122,887        | $995,165               | +7.83%           |
+
 
 ---
 
