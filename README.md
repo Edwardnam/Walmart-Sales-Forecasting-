@@ -4,15 +4,16 @@
 
 **Project Type:** Data Cleaning · Exploratory Data Analysis · Data Visualization  
 
-**Relevant Link: [GitHub Repository](https://github.com/Edwardnam/Walmart-Sales-Forecasting)
-![Weekly Sales Over Time](assets/saleovertime.png)
-![Rolling Average Sales](assets/rolling_avg_sales.png)
-![Store Leaderboard](assets/store_leaderboard.png)
-![Holiday Impact](assets/holiday_impact.png)
-![Seasonality](assets/seaonality_month.png)
-![Correlation Matrix](assets/correlation_matrix.png)
+**Relevant Link: [GitHub Repository](https://github.com/Edwardnam/Walmart-Sales-Forecasting)**
 
- 
+![Weekly Sales Over Time](assets/saleovertime.png)  
+![Rolling Average Sales](assets/rolling_avg_sales.png)  
+![Store Leaderboard](assets/store_leaderboard.png)  
+![Holiday Impact](assets/holiday_impact.png)  
+![Seasonality](assets/seasonality.png)  
+![Correlation Matrix](assets/correlation_matrix.png)  
+![Sales vs Unemployment](assets/sales_vs_unemp.png)  
+![Sales vs Fuel](assets/sales_vs_fuel.png)  
 
 ---
 
@@ -93,8 +94,8 @@ The objective is to:
 - From 2010 to 2012, Walmart maintained **stable annual sales**, though 2012 shows slight declines in growth compared to prior years.  
 
 📊 *Charts (Python)*:  
-- ![Weekly Sales Over Time](salesovertime.png)  
-- ![Rolling Average Sales](assets/charts/rolling_avg_sales.png)  
+- ![Weekly Sales Over Time](assets/saleovertime.png)  
+- ![Rolling Average Sales](assets/rolling_avg_sales.png)  
 
 💡 **Why this matters for Walmart leadership:**  
 Sales stability proves Walmart’s core model is resilient. However, year-to-year flatness suggests **growth opportunities must come from optimizing holidays and high-performing stores**, not just relying on organic demand.  
@@ -111,7 +112,7 @@ Sales stability proves Walmart’s core model is resilient. However, year-to-yea
 - This suggests **benchmarking opportunities**: lagging stores could learn from operational best practices of Tier 1 stores.  
 
 📊 *Chart (Tableau)*:  
-- ![Store Leaderboard](assets/charts/store_leaderboard.png)  
+- ![Store Leaderboard](assets/store_leaderboard.png)  
 
 💡 **Why this matters for Walmart leadership:**  
 Not all stores are equal. Management should **replicate winning formulas from Tier 1 stores** in lower-performing regions, focusing on marketing, layout, and localized promotions.  
@@ -127,8 +128,7 @@ Not all stores are equal. Management should **replicate winning formulas from Ti
 - Indicates holidays are a **reliable demand accelerator** and should drive inventory & marketing strategy.  
 
 📊 *Charts (Python + Tableau)*:  
-- ![Holiday Impact Bar](assets/charts/holiday_impact.png)  
-- ![Holiday KPI Card](assets/charts/holiday_kpi.png)  
+- ![Holiday Impact Bar](assets/holiday_impact.png)  
 
 💡 **Why this matters for Walmart leadership:**  
 Walmart can **increase holiday profitability** by enhancing supply chain readiness, targeted advertising, and bundling promotions.  
@@ -142,8 +142,7 @@ Walmart can **increase holiday profitability** by enhancing supply chain readine
 - Seasonality is consistent across 2010–2012, confirming **predictability of holiday cycles**.  
 
 📊 *Charts (Python + Tableau)*:  
-- ![Seasonality by Month](assets/charts/seasonality_month.png)  
-- ![Seasonality Heatmap](assets/charts/seasonality_heatmap.png)  
+- ![Seasonality](assets/seasonality.png)  
 
 💡 **Why this matters for Walmart leadership:**  
 Seasonal spikes are **predictable and repeatable**, meaning inventory planning should anticipate **Q4 surges** while avoiding overstocking in weaker months.  
@@ -160,9 +159,9 @@ Seasonal spikes are **predictable and repeatable**, meaning inventory planning s
 - Key takeaway: **Holidays and internal cycles matter far more than external economics**.  
 
 📊 *Charts (Python)*:  
-- ![Correlation Heatmap](assets/charts/correlation_heatmap.png)  
-- ![Sales vs Unemployment](assets/charts/sales_vs_unemployment.png)  
-- ![Sales vs Fuel Price](assets/charts/sales_vs_fuel.png)  
+- ![Correlation Matrix](assets/correlation_matrix.png)  
+- ![Sales vs Unemployment](assets/sales_vs_unemp.png)  
+- ![Sales vs Fuel Price](assets/sales_vs_fuel.png)  
 
 💡 **Why this matters for Walmart leadership:**  
 Walmart’s sales are **largely insulated from short-term macro shocks**, which is a competitive advantage. Leadership should **focus less on external volatility** and more on internal execution.  
@@ -213,7 +212,7 @@ The Tableau dashboard consolidates KPIs and visuals:
   - Sales vs Fuel Prices (scatter)  
 
 📊 *Screenshot (Tableau)*:  
-- ![Tableau Dashboard](assets/charts/tableau_dashboard.png)  
+- ![Tableau Dashboard](assets/store_leaderboard.png)  
 
 ---
 
