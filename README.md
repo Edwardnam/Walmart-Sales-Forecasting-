@@ -5,20 +5,14 @@
 **Project Type:** Data Cleaning · Exploratory Data Analysis · Data Visualization  
 
 **Relevant Link: [GitHub Repository](https://github.com/Edwardnam/Walmart-Sales-Forecasting)
+![Weekly Sales Over Time](assets/saleovertime.png)
+![Rolling Average Sales](assets/rolling_avg_sales.png)
+![Store Leaderboard](assets/store_leaderboard.png)
+![Holiday Impact](assets/holiday_impact.png)
+![Seasonality](assets/seaonality_month.png)
+![Correlation Matrix](assets/correlation_matrix.png)
 
-Walmart-Sales-Forecasting/
-├── README.md
-├── assets/
-│   └── charts/
-│       ├── saleovertime.png
-│       ├── rolling_avg_sales.png
-│       ├── store_leaderboard.png
-│       ├── holiday_impact.png
-│       ├── seasonality.png
-│       ├── correlation_matrix.png
-│       ├── sales_vs_unemp.png
-│       ├── sales_vs_fuel.png
-  
+
 
 ---
 
