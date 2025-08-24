@@ -116,9 +116,7 @@ The objective is to:
 
 📊 *Charts (Python + Tableau)*:  
 - ![Holiday Impact Bar](assets/holiday_impact.png)
-- | Avg Holiday Sales | Avg Non-Holiday Sales | Holiday Lift (%) |
-|-------------------|------------------------|------------------|
-| $1,122,887        | $995,165               | +7.83%           |
+
 
 
 ---
