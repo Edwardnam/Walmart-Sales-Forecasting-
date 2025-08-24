@@ -146,9 +146,11 @@ The objective is to:
 - Key takeaway: **Holidays and internal cycles matter far more than external economics**.  
 
 📊 *Charts (Python)*:  
-- ![Correlation Matrix](assets/correlation_matrix.png)  
-- ![Sales vs Unemployment](assets/sales_vs_unemp.png)  
-- ![Sales vs Fuel Price](assets/sales_vs_fuel.png)  
+- ![Correlation Matrix](assets/correlation_matrix.png)
+- ![Sales vs Unemployment (Python)](assets/sales_unem_python.png)
+- ![Sales vs Fuel (Python)](assets/sales_fuel_python.png)
+
+
 
 ---
 
@@ -190,7 +192,7 @@ The Tableau dashboard consolidates KPIs and visuals:
   - Sales vs Fuel Prices (scatter)  
 
 📊 *Screenshot (Tableau)*:  
-- ![Tableau Dashboard](assets/store_leaderboard.png)  
+-![Tableau Dashboard](assets/dashboard_tableau.png)
 
 ---
 
