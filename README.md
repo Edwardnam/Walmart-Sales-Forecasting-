@@ -5,6 +5,8 @@
 **Project Type:** Data Cleaning · Exploratory Data Analysis · Data Visualization  
 
 **Relevant Link: [GitHub Repository](https://github.com/Edwardnam/Walmart-Sales-Forecasting)**
+
+
 ---
 
 ## Table of Contents  
@@ -39,23 +41,13 @@ The objective is to:
 
 ## Executive Summary  
 
-- **Scale & Window:** 45 stores, 2010–2012, **6,445** weekly observations post-cleaning.  
+- **Scale & window:** 45 stores, 2010–2012; **6,445** weekly observations after cleaning.  
 - **Topline:** **$584M** total sales; **~$999K** average weekly sales per store.  
-- **Growth:** 2011 up **~3–4%** vs 2010; 2012 down **~8–10%** vs 2011 (normalization after prior gains).  
-- **Holidays:** Average **+7.8%** lift on holiday weeks; most pronounced in **Nov–Dec**.  
-- **Store Inequality:** Top 10 stores contribute **35%+** of total sales → clear Tier 1/2/3 segments.  
-- **Macro Sensitivity:** Fuel, unemployment, CPI show **weak** relationships with weekly sales (|r| < 0.12).  
-- **So what:** Prioritize **holiday readiness** and **tier-based playbooks**; use **seasonality-aware forecasts** for inventory, labor, and promo planning.
-
-### KPIs at a Glance
-| Metric | Value |
-|---|---|
-| Total Sales | **$584M** |
-| Stores | **45** |
-| Rows (cleaned) | **6,445** |
-| Avg Weekly / Store | **~$999K** |
-| Holiday Lift | **+7.8%** |
-| Top 10 Stores’ Share | **35%+** |
+- **Growth pattern:** 2011 up **~3–4%** vs. 2010; 2012 down **~8–10%** vs. 2011 (post-recession normalization).  
+- **Holidays:** Consistent **+7.8%** lift on holiday weeks, peaking in **Nov–Dec**; effect is durable across years.  
+- **Store inequality:** Top 10 stores contribute **35%+** of sales → clear **Tier 1/2/3** segmentation with persistent gaps.  
+- **Macro sensitivity:** Fuel, CPI, unemployment show **weak** relationships with weekly sales (|r| < 0.12).  
+- **So what for leaders:** Lean into **seasonality + holiday programs** and **tiered playbooks**; forecasting should prioritize **calendar features** and **store effects** over macro noise.
 
 ---
 
@@ -91,73 +83,73 @@ The objective is to:
 
 ### 1. Sales Trends and Growth Rates  
 
-- Weekly trend shows **predictable seasonal spikes** centered on the U.S. holiday calendar; troughs cluster in **Feb/Jul**.  
-- **12-week rolling averages** highlight sustained Q4 momentum and brief summer volatility.  
-- 2010→2011 growth is broad-based; **2012 softness** is visible across most stores, consistent with post-recession normalization.  
-- Volatility is **calendar-driven** rather than macro-driven (see Section 5).
+- Weekly trend shows **predictable seasonal spikes** around the U.S. holiday calendar; troughs cluster in **Feb/Jul**.  
+- **12-week rolling averages** highlight sustained Q4 momentum and short summer volatility.  
+- 2010→2011 growth broad-based; **2012 softness** appears across most stores—normalization rather than shock.  
 
 📊 *Charts (Python)*:  
 - ![Weekly Sales Over Time](assets/saleovertime.png)  
 - ![Rolling Average Sales](assets/rolling_avg_sales.png)  
 
-**Why this matters:** demand is **rhythmic and forecastable**. Inventory flow, staffing, and promo cadence should be **scheduled around the calendar**, not just recent sales.
+**Why this matters:** Demand is **rhythmic and forecastable**. Planning should be anchored to **calendar features** (week-of-year, holiday dummies) and **store effects**, not short-term headlines.
 
 ---
 
 ### 2. Store Performance Leaderboard  
 
-- **Top store (Store 10)** generated **$271M** total; lowest performers in the **$120–140M** range.  
-- Clear **tiering** emerges:  
-  - **Tier 1:** >$200M lifetime — high traffic, strong execution.  
-  - **Tier 2:** $160–200M — average.  
-  - **Tier 3:** <$150M — lagging.  
-- Tier gaps persist across years → persistent structural/operational differences, not one-off shocks.
+- **Top store (Store 10)** generated **$271M** total; the lowest tier ranges **$120–$140M**.  
+- Clear **tiering**:  
+  - **Tier 1:** >$200M lifetime — high traffic + strong execution.  
+  - **Tier 2:** $160–$200M — solid base.  
+  - **Tier 3:** <$150M — lagging; likely fixable execution gaps.  
 
 📊 *Chart (Tableau)*:  
 - ![Store Leaderboard](assets/store_leaderboard.png)  
 
-**Why this matters:** a **single playbook** under-serves both leaders and strugglers. Use **tier-specific targets** and interventions.
+**Why this matters:** A single national playbook **over-serves** some stores and **under-serves** others. **Tier-specific targets** and diagnostics (OOS%, price gaps, labor coverage, floor-set compliance) are required.
 
 ---
 
 ### 3. Holiday Impact  
 
 - **Average lift = +7.8%** (t-test p < 0.05). Typical week **~$995K** → holiday week **~$1.07M**.  
-- Lift is **durable across years**; peak sensitivity in **Nov–Dec** aligns with retail peak.  
-- Holiday gains are **additive** to baseline seasonality (see Section 4), not merely noise.
+- Effect is **repeatable** across years, especially **Nov–Dec**.  
 
 📊 *Charts (Python + Tableau)*:  
-- ![Holiday Impact Bar](assets/holiday_impact.png)  
+- ![Holiday Impact Bar](assets/holiday_impact.png)
 - ![Weekly Sales Over Time (Tableau)](assets/weekly_sales_over_time_tableau.png)
 
-**Why this matters:** holidays are **reliable profit pools**. Failing to front-load buys, labor, and promos leaves revenue and margin on the table.
+**Why this matters:** Holidays are **reliable profit pools**. Treat them as a **program** (forward buys, labor ramp, staged promos, attach bundles) rather than ad-hoc spikes.
 
 ---
 
 ### 4. Seasonality by Month and Year  
 
-- Peak **December** average > **$1.25M**; troughs around **Feb/Jul** near **$950K**.  
-- Heatmap and lines show **repeatable Q4 surges** with mild year-to-year variation.  
-- Seasonality explains far more week-to-week variance than macro signals.
+- Peak **December** average > **$1.25M**; troughs in **Feb/Jul** near **$950K**.  
+- Heatmap and line views show **repeatable Q4 surges** with mild YoY variation.  
 
 📊 *Charts (Python + Tableau)*:  
-- ![Seasonality](assets/seasonality.png)  
+- ![Seasonality](assets/seasonality.png)
 - ![Seasonality by Month (Python)](assets/seasonality_by_month_python.png)
 
-**Why this matters:** adding **month/week-of-year + holiday dummies** to forecasts should materially **reduce MAPE** and improve inventory placement.
+**Why this matters:** Including **month + week-of-year + holiday dummies** will materially reduce **forecast error (MAPE)**, improving inventory and labor placement.
 
 ---
 
 ### 5. Correlation & Macroeconomic Drivers  
 
-- **Correlation Matrix Findings:** fuel (−0.01), unemployment (−0.11), CPI (−0.07) vs sales → **weak** relationships.  
-- Scatter + LOWESS confirm **minimal slopes**; macro variables nudge but don’t **drive** weekly fluctuations.  
-- Implication: focus on **internal levers** (assortment, promos, execution) over external volatility for weekly planning.
+- **Correlation Matrix Findings:**  
+  - Fuel price vs. sales → −0.01 (negligible).  
+  - Unemployment vs. sales → −0.11 (weak negative).  
+  - CPI vs. sales → −0.07 (weak negative).  
+- LOWESS lines show **minimal slopes** → macros **nudge** but don’t **drive** weekly swings.  
 
 📊 *Charts (Python)*:  
-- ![Correlation Matrix](assets/correlation_matrix.png)  
-- ![Sales vs Unemployment (Python)](assets/sales_unem_python.png)  
+- ![Correlation Matrix](assets/correlation_matrix.png)
+- ![Sales vs Unemployment (Python)](assets/sales_unem_python.png)
 - ![Sales vs Fuel (Python)](assets/sales_fuel_python.png)
+
+**Why this matters:** Prioritize **internal levers** (assortment, promos, ops) for weekly planning. Use macro only for **scenario stress-tests** (risk sizing), not as primary steering signals.
 
 ---
 
@@ -171,15 +163,15 @@ The objective is to:
 | 2011 | $210M+      | ~$1.01M          | +3–4% |  
 | 2012 | $175M+      | ~$975K           | –8–10% |  
 
-➡ **Observation:** 2011 momentum slows in 2012 across most stores—consistent with macro normalization and fading stimulus effects.  
+➡ **Observation:** 2011 momentum cooled in 2012—consistent with demand normalization rather than operational issues.
 
 #### b) Average Weekly Sales by Store Tier  
 
 | Store Tier | Definition            | Avg Weekly Sales | Key Insight |  
 |------------|-----------------------|------------------|-------------|  
-| Tier 1     | >$200M lifetime sales | $1.15M           | Flagship / high-traffic; protect availability |  
-| Tier 2     | $160M–$200M           | ~$1.00M          | Solid base; improve conversion and attach |  
-| Tier 3     | <$150M                | $0.85–0.90M      | Turnaround targets; fix leak points (OOS, price, floor set) |  
+| Tier 1     | >$200M lifetime sales | $1.15M           | Protect velocity (availability, attach, queue-busting) |  
+| Tier 2     | $160–$200M           | ~$1.0M           | Lift conversion (endcap discipline, local promos) |  
+| Tier 3     | <$150M                | $0.85–$0.90M     | Turnaround kit (OOS audit, price gaps, floor-set fixes) |
 
 ---
 
@@ -187,9 +179,9 @@ The objective is to:
 
 The Tableau dashboard consolidates KPIs and visuals:  
 
-- **Filters:** Date Range, Holiday Flag  
-- **KPI Cards:** Total Sales ($584M), Avg Weekly ($999K), Holiday Lift (+7.8%)  
-- **Charts:**  
+- **Filters**: Date Range, Holiday Flag  
+- **KPI Cards**: Total Sales ($584M), Avg Sales ($999K), Holiday Impact (+7.8%)  
+- **Charts**:  
   - Weekly Sales Over Time (line)  
   - Store Performance Leaderboard (bar)  
   - Sales vs Unemployment (scatter + trend)  
@@ -203,51 +195,46 @@ The Tableau dashboard consolidates KPIs and visuals:
 
 ## Recommendations  
 
-1. **Holiday Optimization (highest ROI)**  
-   - Pull forward Q4 POs by **2–4 weeks**; target **>98%** availability on top SKUs.  
-   - Phase promos (pre-BF warm-ups → Cyber week → last-mile gifting) to **smooth spikes** and protect margin.  
-   - Expand **basket-builder bundles** and endcaps; pre-build displays before peak weeks.
+1. **Holiday Optimization**  
+   - **Why it matters:** Holidays reliably add **+7.8%**; most upside is operational (stock, labor, attach) rather than discounting.  
+   - **Do this:** Pull Q4 POs forward **2–4 weeks**; aim **>98%** in-stock on A-SKUs. Run **staged promos** (warm-up → event → last-mile). Pre-build endcaps; push **giftable bundles** to lift basket size.
 
-2. **Tier-Based Store Playbooks**  
-   - **Tier 1:** Maintain velocity; aggressive **attach/cross-sell** goals; protect service levels.  
-   - **Tier 2:** Lift **conversion** via floor-set discipline, localized promos, and quick-win pricing tests.  
-   - **Tier 3:** Diagnose **OOS %, price gaps, labor coverage**; pilot 2–3 turnaround kits and track lift.
+2. **Tier-Based Benchmarking**  
+   - **Why it matters:** Top stores drive **35%+** of revenue; Tier 3 gaps are often fixable.  
+   - **Do this:**  
+     - **Tier 1:** Protect velocity—labor guardrails, fast checkout, attach targets.  
+     - **Tier 2:** Improve conversion—floor-set discipline, localized promos, ticket boosters.  
+     - **Tier 3:** Run a **turnaround kit** (OOS audit, price gap check, floor-set correction) and track lift.
 
 3. **Forecasting Models**  
-   - Baseline **Prophet/ARIMA** with **yearly seasonality + holiday dummies + store fixed effects**.  
-   - Add **week-of-year**, **lag features**, and **promo flags**; retrain monthly; re-forecast weekly in Q4.  
-   - Publish **MAPE by store** and use it to prioritize ops attention.
+   - **Why it matters:** Seasonality + holidays explain most variance; modeling them reduces **stockouts/overstock**.  
+   - **Do this:** Use **Prophet/ARIMA** with **yearly seasonality + holiday dummies + store fixed effects + week-of-year + lags**. Retrain monthly; re-forecast weekly in Q4. Publish **MAPE by store** to guide ops focus.
 
 4. **Pricing & Promo Hygiene**  
-   - Use **elasticity-aware** discounts; avoid blanket markdowns during strongest natural demand.  
-   - Create **price fences** (bundles, membership, time-boxed offers) to capture value and protect margin.
+   - **Why it matters:** Q4 traffic is naturally high; blanket markdowns risk **trading margin for non-incremental units**.  
+   - **Do this:** Use **price fences** (bundles, membership, time-boxed offers). A/B test price bands in low-season months; lock **holiday pricing** ahead of peak.
 
-5. **Measurement Plan**  
-   - Track **Holiday OOS**, **Service Level**, **Attach Rate**, **Promo ROI**.  
-   - Pre-register success criteria and (where possible) keep a **holdout** to measure true lift.
+5. **Last-Mile & CRM Alignment**  
+   - **Why it matters:** Late-season conversion hinges on **convenience** and **message timing**.  
+   - **Do this:** Shift creative by phase (discovery → urgency → convenience/BOPIS). Coordinate store pickup capacity and SLA; monitor **BOPIS share** and conversion.
 
 ---
 
 ## Clarifying Questions, Assumptions, and Caveats  
 
-- **Questions:**  
-  - Can we split `holidays_flag` into specific holidays (e.g., Black Friday vs. Christmas) for more precise modeling?  
-  - Can we enrich stores with **region/format/size** to explain tier gaps?  
-  - Do we have **promo calendars** (type/depth/duration) to estimate price elasticity?
-
-- **Assumptions & Caveats:**  
-  - Data ends in **Oct 2012**; insights emphasize **in-sample patterns**.  
-  - `holidays_flag` is binary; richer taxonomy would improve causal attribution.  
-  - Macro variables are regional proxies; localized effects could be stronger than seen here.
+- Store metadata (region, size, format) is missing, limiting deeper segmentation and explaining tier gaps.  
+- `holidays_flag` is binary; splitting by **holiday type** would improve attribution (e.g., Black Friday vs. Christmas).  
+- Data ends in Oct 2012 → conclusions focus on **in-sample patterns**; external validity should be re-checked with new data.  
 
 ---
 
 ## About  
 
 This project demonstrates a **full-stack data workflow**:  
+
 - **Excel** → Cleaning, pivot tables, preliminary metrics  
 - **SQL (BigQuery)** → Aggregations, schema extraction, validation  
 - **Python** → Time series, correlation, significance testing, visualizations  
 - **Tableau** → Final dashboard for stakeholders  
 
-For more projects and my data journey, connect on **[LinkedIn](https://www.linkedin.com/in/nam-ngo-b48780206/)**.  
+For more projects and my data journey, visit my **[LinkedIn](https://www.linkedin.com/in/nam-ngo-b48780206/)**.  
