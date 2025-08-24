@@ -223,4 +223,4 @@ This project demonstrates a **full-stack data workflow**:
 - **Python** → Time series, correlation, significance testing, visualizations  
 - **Tableau** → Final dashboard for stakeholders  
 
-For more projects and my data journey, visit my [Portfolio](#).  
+For more projects and my data journey, visit my linked_in: https://www.linkedin.com/in/nam-ngo-b48780206/.  
