@@ -116,7 +116,7 @@ The objective is to:
 
 📊 *Charts (Python + Tableau)*:  
 - ![Holiday Impact Bar](assets/holiday_impact.png)
-![Weekly Sales Over Time (Tableau)](assets/weekly_sales_over_time_tableau.png)
+- ![Weekly Sales Over Time (Tableau)](assets/weekly_sales_over_time_tableau.png)
 
 
 
