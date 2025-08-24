@@ -19,19 +19,20 @@
 
 ## Table of Contents  
 
-1. Project Background  
-2. Executive Summary  
-3. Dataset Schema  
-4. Insights Deep-Dive  
-   - Sales Trends and Growth Rates  
-   - Store Performance Leaderboard  
-   - Holiday Impact  
-   - Seasonality by Month and Year  
-   - Correlation & Macroeconomic Drivers  
-   - Additional Pivot Table Summaries  
-5. Dashboard (Tableau)  
-6. Recommendations  
-7. Clarifying Questions, Assumptions, and Caveats  
+- [Project Background](#project-background)  
+- [Executive Summary](#executive-summary)  
+- [Dataset Schema](#dataset-schema)  
+- [Insights Deep-Dive](#insights-deep-dive)  
+  - [Sales Trends and Growth Rates](#1-sales-trends-and-growth-rates)  
+  - [Store Performance Leaderboard](#2-store-performance-leaderboard)  
+  - [Holiday Impact](#3-holiday-impact)  
+  - [Seasonality by Month and Year](#4-seasonality-by-month-and-year)  
+  - [Correlation & Macroeconomic Drivers](#5-correlation--macroeconomic-drivers)  
+  - [Additional Pivot Table Summaries](#6-additional-pivot-table-summaries)  
+- [Dashboard (Tableau)](#dashboard-tableau)  
+- [Recommendations](#recommendations)  
+- [Clarifying Questions, Assumptions, and Caveats](#clarifying-questions-assumptions-and-caveats)  
+- [About](#about)  
 
 ---
 
@@ -97,9 +98,6 @@ The objective is to:
 - ![Weekly Sales Over Time](assets/saleovertime.png)  
 - ![Rolling Average Sales](assets/rolling_avg_sales.png)  
 
-💡 **Why this matters for Walmart leadership:**  
-Sales stability proves Walmart’s core model is resilient. However, year-to-year flatness suggests **growth opportunities must come from optimizing holidays and high-performing stores**, not just relying on organic demand.  
-
 ---
 
 ### 2. Store Performance Leaderboard  
@@ -114,9 +112,6 @@ Sales stability proves Walmart’s core model is resilient. However, year-to-yea
 📊 *Chart (Tableau)*:  
 - ![Store Leaderboard](assets/store_leaderboard.png)  
 
-💡 **Why this matters for Walmart leadership:**  
-Not all stores are equal. Management should **replicate winning formulas from Tier 1 stores** in lower-performing regions, focusing on marketing, layout, and localized promotions.  
-
 ---
 
 ### 3. Holiday Impact  
@@ -130,9 +125,6 @@ Not all stores are equal. Management should **replicate winning formulas from Ti
 📊 *Charts (Python + Tableau)*:  
 - ![Holiday Impact Bar](assets/holiday_impact.png)  
 
-💡 **Why this matters for Walmart leadership:**  
-Walmart can **increase holiday profitability** by enhancing supply chain readiness, targeted advertising, and bundling promotions.  
-
 ---
 
 ### 4. Seasonality by Month and Year  
@@ -143,9 +135,6 @@ Walmart can **increase holiday profitability** by enhancing supply chain readine
 
 📊 *Charts (Python + Tableau)*:  
 - ![Seasonality](assets/seasonality.png)  
-
-💡 **Why this matters for Walmart leadership:**  
-Seasonal spikes are **predictable and repeatable**, meaning inventory planning should anticipate **Q4 surges** while avoiding overstocking in weaker months.  
 
 ---
 
@@ -163,9 +152,6 @@ Seasonal spikes are **predictable and repeatable**, meaning inventory planning s
 - ![Sales vs Unemployment](assets/sales_vs_unemp.png)  
 - ![Sales vs Fuel Price](assets/sales_vs_fuel.png)  
 
-💡 **Why this matters for Walmart leadership:**  
-Walmart’s sales are **largely insulated from short-term macro shocks**, which is a competitive advantage. Leadership should **focus less on external volatility** and more on internal execution.  
-
 ---
 
 ### 6. Additional Pivot Table Summaries  
@@ -180,8 +166,6 @@ Walmart’s sales are **largely insulated from short-term macro shocks**, which 
 
 ➡ **Observation**: Growth peaked in 2011 but declined in 2012, likely due to post-recession stabilization.  
 
-💡 **Leadership takeaway:** Management should treat **flat 2012 growth as a warning sign**: without innovation, growth may stagnate further.  
-
 ---
 
 #### b) Average Weekly Sales by Store Tier  
@@ -191,10 +175,6 @@ Walmart’s sales are **largely insulated from short-term macro shocks**, which 
 | Tier 1     | >$200M lifetime sales | $1.15M           | High-traffic, resilient |  
 | Tier 2     | $160M–$200M           | ~$1.0M           | Average performers |  
 | Tier 3     | <$150M                | $850K–$900K      | Turnaround targets |  
-
-➡ **Observation**: Tier 1 stores consistently outperform Tier 3 by ~30%.  
-
-💡 **Leadership takeaway:** Create **tier-specific strategies** — aggressive growth plans for Tier 1, stabilization and turnaround plans for Tier 3.  
 
 ---
 
@@ -226,7 +206,7 @@ The Tableau dashboard consolidates KPIs and visuals:
 
 ---
 
-## Clarifying Questions & Assumptions  
+## Clarifying Questions, Assumptions, and Caveats  
 
 - Store metadata (region, size, demographics) is missing, limiting deeper segmentation.  
 - `holidays_flag` is binary and does not distinguish specific holiday types.  
