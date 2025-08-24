@@ -6,14 +6,6 @@
 
 **Relevant Link: [GitHub Repository](https://github.com/Edwardnam/Walmart-Sales-Forecasting)**
 
-![Weekly Sales Over Time](assets/saleovertime.png)  
-![Rolling Average Sales](assets/rolling_avg_sales.png)  
-![Store Leaderboard](assets/store_leaderboard.png)  
-![Holiday Impact](assets/holiday_impact.png)  
-![Seasonality](assets/seasonality.png)  
-![Correlation Matrix](assets/correlation_matrix.png)  
-![Sales vs Unemployment](assets/sales_vs_unemp.png)  
-![Sales vs Fuel](assets/sales_vs_fuel.png)  
 
 ---
 
